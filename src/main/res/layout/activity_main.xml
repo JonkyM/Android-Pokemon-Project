@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="341dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="144dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Create A Raid Entry"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPokemonSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="239dp"
+        android:text="Select Raid Pokemon:"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <Spinner
+        android:id="@+id/spinnerLegendaryPokemon"
+        android:layout_width="205dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPokemonSelect"
+        app:layout_constraintStart_toEndOf="@+id/textViewPokemonSelect"
+        app:layout_constraintTop_toTopOf="@+id/textViewPokemonSelect"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textViewCombatPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Enter Pokemon Combat Power:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textViewPokemonSelect"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPokemonSelect" />
+
+    <EditText
+        android:id="@+id/editTextNumberCombatP"
+        android:layout_width="145dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCombatPower"
+        app:layout_constraintStart_toEndOf="@+id/textViewCombatPower"
+        app:layout_constraintTop_toTopOf="@+id/textViewCombatPower"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textViewPlayerNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Enter Number Of Needed Players:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textViewCombatPower"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCombatPower" />
+
+    <EditText
+        android:id="@+id/editTextNumberPlayers"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPlayerNum"
+        app:layout_constraintStart_toEndOf="@+id/textViewPlayerNum"
+        app:layout_constraintTop_toTopOf="@+id/textViewPlayerNum"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textViewMapSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Select Raid Location:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textViewPlayerNum"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPlayerNum" />
+
+    <Button
+        android:id="@+id/buttonOpenMap"
+        android:layout_width="211dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="24dp"
+        android:text="Open Map"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMapSelect"
+        app:layout_constraintStart_toEndOf="@+id/textViewMapSelect"
+        app:layout_constraintTop_toTopOf="@+id/textViewMapSelect" />
+
+    <TextView
+        android:id="@+id/textViewPickDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Pick Raid Date:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textViewMapSelect"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMapSelect" />
+
+    <Button
+        android:id="@+id/buttonPickDate"
+        android:layout_width="211dp"
+        android:layout_height="49dp"
+        android:text="Pick Date"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPickDate"
+        app:layout_constraintEnd_toEndOf="@+id/buttonOpenMap"
+        app:layout_constraintTop_toTopOf="@+id/textViewPickDate" />
+
+    <TextView
+        android:id="@+id/textViewSelectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Selected Date:"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPickDate"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPickDate" />
+
+    <TextView
+        android:id="@+id/textViewDisplayDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSelectedDate"
+        app:layout_constraintStart_toEndOf="@+id/textViewSelectedDate"
+        app:layout_constraintTop_toTopOf="@+id/textViewSelectedDate" />
+
+    <TextView
+        android:id="@+id/textViewSelectedLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Selected Location:"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSelectedDate"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSelectedDate" />
+
+    <TextView
+        android:id="@+id/textViewDisplayCoords"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSelectedLocation"
+        app:layout_constraintStart_toEndOf="@+id/textViewSelectedLocation"
+        app:layout_constraintTop_toTopOf="@+id/textViewSelectedLocation" />
+
+    <LinearLayout
+        android:id="@+id/tabBar"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButtonRaidList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:backgroundTint="#E19696"
+            android:contentDescription="Raid List"
+            android:cropToPadding="false"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/list_icon" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewTempText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPickDate"
+        app:layout_constraintStart_toStartOf="@+id/buttonPickDate"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPickDate" />
+
+    <Button
+        android:id="@+id/buttonSaveData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE ENTERED DATA"
+        app:layout_constraintBottom_toTopOf="@+id/tabBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
